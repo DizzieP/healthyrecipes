@@ -34,7 +34,10 @@ body {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     height: auto;
-    width: 100%;
+    width: 80%;
+    margin-top: 2%;
+    margin-bottom: 7%;
+    height: auto;
     border: 3px solid #3BB39B; 
     align-self: end;
   }
@@ -61,7 +64,7 @@ body {
     color: #87FFE7;
   }
   
-  h1, h2, p, li {
+  h1, h2, h3, p, li {
     font-family: Helvetica;
     word-wrap: wrap;
   }
@@ -107,15 +110,22 @@ body {
 
     div.section-one {
       grid-area: 1 / 1 / 2 / 2;
-      
+      align-self: center;
+      width: 80%;
+      height: 80%;
     }
 
     img {
       grid-area: 1 / 2 / 2 / 3;
+      align-self: center;
+      height: 80%;
+      width: 75%;
+      margin-top: 18%;
     }
 
     h1 {
       padding-top: 5%;
+      font-size: 2rem;
     }
   }
 
