@@ -118,7 +118,7 @@ body {
     img {
       grid-area: 1 / 2 / 2 / 3;
       align-self: center;
-      height: 80%;
+      height: auto;
       width: 75%;
       margin-top: 18%;
     }
