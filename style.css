@@ -5,41 +5,121 @@
   line-height: 1.5;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
-    font-size: 12px;
-    background-color: #FFBAA1;
     width: 100%;
     height: 100%;
   }
 
-  div.section {
+  div.container {
     display: grid;
-    grid-template-rows: 1fr 0.25fr;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-content: center;
+    background-color: #365ce0;
+    color: white;
+    width: 100%;
+    height: auto; 
+  }
+
+  header {
+    display: grid;
+    grid-row: 1 / 2;
+    grid-column: 1 / 6;
+    border-bottom: 5px solid #10bfde;
+  }
+
+  h1 {
+    font-family: 'Georgia, serif';
+    color: #10deb9;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    grid-row: auto;
+    grid-column: 1 / 2;
+    font-size: 3rem;
+    text-align: center;
+    align-self: center;
+    justify-self: start;
+  }
+
+  ul.headerlist {
+    display: grid;
+    list-style-type: none;
+    font-size: 1.5rem;
+    justify-content: space-around;
+    align-content: center;
+    grid-row: 1 / 2;
+    grid-column: 2 / 6;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+  }
+
+  li.home {
+    color: #10de73;
+    background-color: white;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100%;
+  }
+
+  li.about {
+    color: #10de73;
+    background-color: white;
+    grid-row: 1 / 2;
+    grid-column: 3 / 4;
+    width: 100%;
+    height: 100%;
+  }
+
+  li.recipes {
+    color: #10de73;
+    background-color: white;
+    grid-row: 1 / 2;
+    grid-column: 4 / 5;
+    width: 100%;
+    height: 100%;
+  }
+
+  li.contact {
+    color: #10de73;
+    background-color: white;
+    grid-row: 1 / 2;
+    grid-column: 5 / 6;
+    width: 100%;
+    height: 100%;
   }
 
   div.section-one {
-    align-self: center;
-    justify-items: center;
-    width: 80%;
-    height: auto;
-    
-  }
-
-  img {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    height: auto;
-    width: 80%;
-    margin-top: 2%;
-    margin-bottom: 7%;
-    height: auto;
-    border: 3px solid #3BB39B; 
-    align-self: end;
+    height: 100%;
+    border-right: 5px solid #10bfde;
+  }
+
+  img.recipepic {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  div.section-two {
+    display: grid;
+    align-self: center;
+    grid-row: 2 / 3;
+    grid-column: 2 / 6;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    
   }
   
   .description {
@@ -57,7 +137,7 @@ body {
   }
   
   p.time {
-    color: #3BB39B;
+    color: yellow;
   }
   
   .external-link {
@@ -69,96 +149,125 @@ body {
     word-wrap: wrap;
   }
 
-  h1 {
-    padding-top: 10%;
-    font-size: 1.2rem;
-  }
-
   .citation {
     text-align: left;
   }
 
-  @media only screen and (min-width: 768px) {
+  div.footer {
+    border-top: 5px solid #10bfde;
+    grid-row: 3 / 4;
+    grid-column: 1 / 6;
+    width: 100%;
+    height: 100%;
+  }
+
+  p.designer {
+    background-color: white;
+    color: #10deb9;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  @media only screen and (max-width: 767px) {
     
       body {
-        font-size: 16px;
+        font-size: 12px;
       }
 
-      h1 {
-        padding-top: 0%;
-      }
-
-      img {
-        justify-self: center;
-        align-self: center;
+      div.section {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-content: center;
+        background-color: rgb(80, 200, 120, 0.5);
+        color: white;
         width: 100%;
         height: auto;
       }
-  }
 
-  @media only screen and (min-width: 1024px) {
+      h1 {
+        display: grid;
+        font-family: 'Georgia, serif';
+        color: black;
+        opacity: 0.5;
+        background-color: yellow;
+        width: 100%;
+        height: 120px;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        font-size: 5rem;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+      }
 
-    div.section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
-      align-items: center;
-      align-content: center;
-      justify-content: center;
-      justify-items: center;
-    }
-
-    div.section-one {
-      grid-area: 1 / 1 / 2 / 2;
-      align-self: center;
-      width: 80%;
-      height: 80%;
-    }
-
-    img {
-      grid-area: 1 / 2 / 2 / 3;
-      align-self: center;
-      height: auto;
-      width: 75%;
-      margin-top: 18%;
-    }
-
-    h1 {
-      padding-top: 5%;
-      font-size: 2rem;
-    }
-  }
-
-  @media only screen and (min-width: 2560px) {
-
-    div.section {
-      align-content: center;
-      justify-content: center;
-    }
+      div.section-one {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;    
+      }
     
-    h1 {
-      padding-top: 0%;
-      font-size: 70px;
-    }
+      div.section-two {
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 100%;
+        grid-row: 3 / 4;
+        grid-column: 1 / 2; 
+      }
 
-    .description {
-      font-size: 40px;
-    }
-
-    p#cook-time {
-      font-size: 35px;
-    }
-
-    h2 {
-      font-size: 30px;
-    }
-
-    ul.ingredients {
-      font-size: 25px;
-    }
-
-    p, p.time {
-      font-size: 25px;
-    }
-  }
+      .description {
+        font-size: 1.1rem;
+        word-wrap: wrap;
+      }
+      
+      #cook-time {
+        font-weight: bold;
+      }
+      
+      .ingredients li {
+        list-style: square;
+        word-wrap: wrap;
+      }
     
+      .ingredients {
+        padding-bottom: 0px;
+      }
+      
+      p.time {
+        color: yellow;
+      }
+      
+      .external-link {
+        color: #87FFE7;
+      }
+      
+      h1, h2, h3, p, li {
+        font-family: Helvetica;
+        word-wrap: wrap;
+      }
+    
+      .citation {
+        text-align: left;
+      }
+
+      div.footer, p.designer {
+        display: grid;
+        background-color: yellow;
+        color: black;
+        opacity: 0.5;
+        text-align: center;
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+        width: 100%;
+        height: 100%;
+        align-self: end;
+      }
+  }
+
+  
